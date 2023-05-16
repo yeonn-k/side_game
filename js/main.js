@@ -1,7 +1,7 @@
 const BG_WIDTH = 1400;
 const BG_HEIGHT = 550;
 
-const HERO_WIDTH = 128;
+const HERO_WIDTH = 120;
 const HERO_HEIGHT = 138;
 
 const COIN_WIDTH = 64;

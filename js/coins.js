@@ -37,6 +37,7 @@ function randomCoin() {
 }
 
 setInterval(createCoins, 3000);
+let getCoinSwitch = false;
 
 function getCoin() {
   coinElementArr.forEach((coinElement) => {
@@ -46,15 +47,12 @@ function getCoin() {
     const coinBottomNum = Number(coinElement.style.bottom.split("px")[0]);
     const heroBottomNum = Number(heroElement.style.bottom.split("px")[0]);
 
-    let getCoinSwitch = false;
-
     if (
       //coin - hero collision range
       heroBottomNum + HERO_HEIGHT >= coinBottomNum &&
       heroLeftNum >= coinLeftNum - HERO_WIDTH &&
       heroLeftNum + HERO_WIDTH <= coinLeftNum + COIN_WIDTH + HERO_WIDTH
     ) {
-      console.log("test");
       getCoinSwitch = true;
 
       coinElement.remove();
@@ -64,6 +62,26 @@ function getCoin() {
     } else {
       getCoinSwitch = false;
     }
+
+    function coinScore() {
+      const coinBox = document.getElementById("coin");
+      const coinNum = document.createElement("span");
+
+      let scoreNum = 0;
+
+      if (getCoinSwitch === true) {
+        scoreNum++;
+      } else {
+        return;
+      }
+
+      coinNum.textContent = parseInt(scoreNum);
+      console.log(scoreNum);
+
+      coinBox.appendChild(coinNum);
+    }
+
+    coinScore();
   });
 }
 

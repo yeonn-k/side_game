@@ -209,7 +209,7 @@ h1 {
 #hero {
   position: absolute;
   height: 140px;
-  width: 128px;
+  width: 106px;
 
   /* 좌측하단
   left: 60px;
@@ -222,29 +222,33 @@ h1 {
 
   z-index: 100;
   background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_front.png")
-    no-repeat 0px -116px;
+    no-repeat -10px -116px;
 }
 
 #hero.stop {
   background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_front.png")
-    no-repeat 0px -116px;
+    no-repeat -10px -116px;
+  width: 106px;
 }
 
 #hero.left {
   background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_walk1.png")
-    no-repeat 0px -116px;
+    no-repeat -7px -116px;
+  width: 112px;
   transform: scaleX(-1);
 }
 
 #hero.right {
   background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_walk1.png")
-    no-repeat 0px -116px;
+    no-repeat -7px -116px;
+  width: 112px;
 }
 
 #hero.jump {
   background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_swim2.png")
-    no-repeat 0px -116px;
+    no-repeat -8px -116px;
   transition: top 0.5s linear;
+  width: 113px;
 }
 
 #hero.jumpAttack {
