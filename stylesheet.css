@@ -1,0 +1,324 @@
+#wrap {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*게임 이름*/
+h1 {
+  color: #81cb0fa1;
+  font-family: "Braah One", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+/*상단바*/
+
+#topMenu {
+  margin: 0 auto;
+  width: 1400px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+#score > span {
+  font-family: "Braah One", sans-serif;
+  font-size: 30px;
+  color: #81cb0fa1;
+  margin-top: 10px;
+}
+
+#coin {
+  position: absolute;
+  left: 50%;
+  margin-left: -82px;
+  width: 164px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#coin > img {
+  width: 64px;
+  height: 64px;
+  scale: 0.6;
+}
+
+#coin > span {
+  font-family: "Braah One", sans-serif;
+  font-size: 30px;
+  color: #81cb0fa1;
+  padding-top: 15.5px;
+}
+
+/*게임화면*/
+#bg {
+  background-color: black;
+  margin: 0 auto;
+  width: 1400px;
+  height: 550px;
+  background: url("img/blue_grass.png") repeat;
+  background-position-y: 688px;
+  position: relative;
+}
+
+#startBtn {
+  position: absolute;
+  width: 420px;
+  height: 130px;
+  border-radius: 47px;
+  left: 50%;
+  top: 50%;
+  margin-left: -210px;
+  margin-top: -65px;
+  background-color: #80cb0fab;
+  color: white;
+  font-size: 64px;
+  font-family: "Braah One", sans-serif;
+  line-height: 148px;
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+#startBtm.hidden {
+  display: none;
+}
+#tree1 {
+  background: url("img/TreeAndGrass/foliagePack_009.png") no-repeat;
+  height: 214px;
+  width: 109px;
+  position: absolute;
+  bottom: 64px;
+  left: 31px;
+}
+
+#tree2 {
+  background: url("img/TreeAndGrass/foliagePack_006.png") no-repeat;
+  height: 208px;
+  width: 86px;
+  position: absolute;
+  bottom: 64px;
+  left: 427px;
+  filter: brightness(80%);
+}
+
+#tree3 {
+  background: url("img/TreeAndGrass/foliagePack_010.png") no-repeat;
+  height: 211px;
+  width: 151px;
+  position: absolute;
+  bottom: 64px;
+  left: 491px;
+}
+
+#tree4 {
+  background: url("img/TreeAndGrass/foliagePack_007.png") no-repeat;
+  height: 208px;
+  width: 122px;
+  position: absolute;
+  bottom: 64px;
+  left: 1041px;
+  filter: brightness(80%);
+}
+
+#tree5 {
+  background: url("img/TreeAndGrass/foliagePack_008.png") no-repeat;
+  height: 187px;
+  width: 88px;
+  position: absolute;
+  bottom: 64px;
+  left: 1235px;
+}
+
+#grass1 {
+  background: url("img/TreeAndGrass/foliagePack_051.png") no-repeat;
+  height: 58px;
+  width: 150px;
+  position: absolute;
+  bottom: 64px;
+  left: 949px;
+}
+#grass2 {
+  background: url("img/TreeAndGrass/foliagePack_050.png") no-repeat;
+  height: 56px;
+  width: 139px;
+  transform: scaleX(-1);
+  position: absolute;
+  bottom: 64px;
+  left: 160px;
+  filter: brightness(0.8);
+}
+
+#her #grass3 {
+  background: url("img/TreeAndGrass/foliagePack_002.png") no-repeat;
+  height: 32px;
+  width: 45px;
+  position: absolute;
+  bottom: 64px;
+  left: 1130px;
+}
+#grass4 {
+  background: url("img/TreeAndGrass/foliagePack_003.png") no-repeat;
+  height: 54px;
+  width: 28px;
+  position: absolute;
+  bottom: 64px;
+  left: 282px;
+}
+#grass5 {
+  background: url("img/TreeAndGrass/foliagePack_062.png") no-repeat;
+  height: 50px;
+  width: 42px;
+  position: absolute;
+  bottom: 64px;
+  left: 700px;
+}
+#grass6 {
+  background: url("img/TreeAndGrass/foliagePack_062.png") no-repeat;
+  height: 50px;
+  width: 42px;
+  position: absolute;
+  bottom: 64px;
+  left: 768px;
+}
+#grass7 {
+  background: url("img/TreeAndGrass/foliagePack_062.png") no-repeat;
+  height: 50px;
+  width: 42px;
+  position: absolute;
+  bottom: 64px;
+  left: 831px;
+}
+
+#ground {
+  background: url("img/grassMid.png") repeat;
+  position: absolute;
+  width: 1400px;
+  height: 68px;
+
+  bottom: 0;
+}
+
+/*Yellow_hero class*/
+#hero {
+  position: absolute;
+  height: 140px;
+  width: 128px;
+
+  /* 좌측하단
+  left: 60px;
+  bottom: 60px; */
+
+  /* 중앙 하단*/
+  left: 50%;
+  bottom: 60px;
+  margin-left: -64px;
+
+  z-index: 100;
+  background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_front.png")
+    no-repeat 0px -116px;
+}
+
+#hero.stop {
+  background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_front.png")
+    no-repeat 0px -116px;
+}
+
+#hero.left {
+  background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_walk1.png")
+    no-repeat 0px -116px;
+  transform: scaleX(-1);
+}
+
+#hero.right {
+  background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_walk1.png")
+    no-repeat 0px -116px;
+}
+
+#hero.jump {
+  background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_swim2.png")
+    no-repeat 0px -116px;
+  transition: top 0.5s linear;
+}
+
+#hero.jumpAttack {
+  background: url("./img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_jumpAttack.png")
+    no-repeat 0px -116px;
+  width: 138px;
+}
+#hero.attack {
+  background: url("img/kenney_platformer-pack-redux/PNG/Players/128x256/Yellow/alienYellow_attack.png")
+    no-repeat 0px -116px;
+  width: 256px;
+}
+
+/*random enemy*/
+
+#enemy.bee {
+  background: url(./img/enemy/bee.png) no-repeat -13px -27px;
+  width: 104px;
+  height: 83px;
+  transform: scale(0.7);
+  display: inline-block;
+  position: absolute;
+  bottom: 280px;
+}
+
+#enemy.wingMan {
+  background: url(./img/enemy/wingMan1.png) no-repeat -2px -1px;
+  width: 174px;
+  height: 125px;
+  transform: scale(0.7);
+  display: inline-block;
+  bottom: 290px;
+}
+
+#enemy.mouse {
+  background: url(./img/enemy/mouse.png) no-repeat -10px -64px;
+  width: 109px;
+  height: 71px;
+  display: inline-block;
+  transform: scale(0.9);
+  bottom: 60px;
+}
+
+#enemy.slimeBlue {
+  background: url(./img/enemy/slimeBlue.png) no-repeat -19px -65px;
+  width: 91px;
+  height: 63px;
+  transform: scale(1.2);
+  display: inline-block;
+  bottom: 60px;
+}
+
+#snail {
+  background: url(./img/enemy/snail.png) no-repeat -14px -55px;
+  width: 101px;
+  height: 74px;
+  display: inline-block;
+  transform: scale(0.9);
+  bottom: 60px;
+}
+
+/*하단바*/
+/* #startBtn {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  height: 65px;
+  border-radius: 21px;
+  margin-top: 30px;
+  border: none;
+  background-color: #81cb0fa1;
+  color: white;
+  font-size: 30px;
+  font-family: "Braah One", sans-serif;
+  line-height: 65px;
+  padding: 10px;
+} */
