@@ -1,6 +1,10 @@
 //create coin
 
 let coinElementArr = [];
+let scoreNum = 0;
+const coinNum = document.getElementsByClassName("coinNum")[0];
+
+console.dir(coinNum);
 
 function createCoins() {
   const coinElement = document.createElement("div");
@@ -21,6 +25,7 @@ function createCoins() {
 
   setTimeout(() => {
     coinElement.remove();
+    coinElementArr = coinElementArr.filter((el) => el !== coinElement);
   }, 8000);
 
   bgElement.appendChild(coinElement);
@@ -64,21 +69,19 @@ function getCoin() {
     }
 
     function coinScore() {
-      const coinBox = document.getElementById("coin");
-      const coinNum = document.createElement("span");
-
-      let scoreNum = 0;
+      // const coinBox = document.getElementById("coin");
+      // const coinNum = document.createElement("span");
 
       if (getCoinSwitch === true) {
-        scoreNum++;
+        scoreNum += 10;
       } else {
         return;
       }
 
       coinNum.textContent = parseInt(scoreNum);
-      console.log(scoreNum);
+      // console.log(scoreNum);
 
-      coinBox.appendChild(coinNum);
+      // coinBox.appendChild(coinNum);
     }
 
     coinScore();
